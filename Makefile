@@ -7,5 +7,5 @@ clean:
 
 build/intro: intro.cpp
 	mkdir -pv build
-	g++ -std=c++14 -O2 -o $@ $<
+	g++ -std=c++14 -O2 -march=native -o $@ $<
 	objdump -d -M intel $@ > build/intro.hex
